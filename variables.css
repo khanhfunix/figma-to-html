@@ -1,0 +1,67 @@
+:root {
+  --color-bg-menu-mobile: #ffffff;
+  --color-bd-menu-mobile: #e5e8ec;
+  --color-text-menu-mobile: #212529;
+  --color-text-menu-mobile-hover: #2b38d1;
+}
+:root {
+  --image-cards-gap: 5px;
+}
+:root {
+  --color-bg-header: #ffffff;
+  --color-bg-header-sticky: #ffffff;
+  --color-border-menu: #e5e8ec;
+  --color-icon-header: #212529;
+  --color-count-header: #dd3842;
+}
+:root {
+  --bg-top-header: #ffffff;
+  --color-border-top: #e5e8ec;
+  --color-text-top-header: #515d66;
+  --color-link-top-header: #212529;
+  --color-link-top-header-hover: #2b38d1;
+}
+:root {
+  --bg-top-bar: #d93939;
+  --color-text-top-bar: #ffffff;
+}
+:root {
+  --color-bg-body: #f1f5f6;
+  --color-text-body: #515d66;
+  --color-main: #212529;
+  --color-secondary: #dd3842;
+  --color-link: #212529;
+  --color-link-hover: #2b38d1;
+  --color-scrollbar: #8d979e;
+  --color-link-menu: #212529;
+  --color-link-menu-heading: #212529;
+  --color-link-menu-sub: #515d66;
+  --color-link-menu-hover: #2b38d1;
+  --color-name-product: #212529;
+  --color-name-product-hover: #2b38d1;
+  --color-star-product: #ffb800;
+  --color-compare-price-product: #8d979e;
+  --color-price-product: #2b38d1;
+  --color-current-product: #dd3842;
+  --color-cart-product: #2b38d1;
+  --color-out-product: #dd3842;
+  --color-btn-product: #515d66;
+  --color-btn-product-hover: #ffffff;
+  --bg-btn-product: #ffffff;
+  --bg-btn-product-hover: #2b38d1;
+  --color-label-hot: #dd3842;
+  --color-label-new: #008a00;
+  --color-label-sale: #dd3842;
+  --color-label-in: #008a00;
+  --color-label-out: #ef262c;
+  --color-btn-text: #ffffff;
+  --color-btn: #2b38d1;
+  --color-border-btn: #2b38d1;
+  --color-btn-text_hover: #ffffff;
+  --color-btn-hover: #212529;
+  --color-border-btn-hover: #212529;
+  --color-cl-btn-p-n: #ffffff;
+  --color-bg-btn-p-n: #2b38d1;
+  --color-cl-btn-p-n-hover: #ffffff;
+  --color-bg-btn-p-n-hover: #2b38d1;
+}

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone HTML from Figma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,300;0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="variables.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="top-bar" class="d-none d-lg-block border border-light-subtle">
+      <div class="container-xl">
+        <div class="d-flex justify-content-between py-2">
+          <div class="d-flex">
+            <div class="fw-normal">
+              You are a student and students get 20% discount.
+            </div>
+            <a
+              style="
+                margin-left: 5px;
+                text-decoration: underline;
+                font-weight: bold;
+              "
+              href="#"
+              >Learn More !</a
+            >
+          </div>
+          <div class="d-flex gap-5 justify-content-around fw-medium">
+            <div class="d-flex gap-3 top-bar-menu">
+              <a href="#">Store Locator</a>
+              <a href="#">Order Tracking</a>
+              <a href="#">FAQs</a>
+            </div>
+            <div class="d-flex gap-3">
+              <a href="#" class="d-flex gap-1 align-items-center">
+                <span>English</span>
+                <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+              </a>
+              <a href="#" class="d-flex gap-1 align-items-center">
+                <span>USD</span>
+                <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <header id="header">
+      <div class="container-xl">
+        <div class="d-lg-flex justify-content-between align-items-center py-3">
+          <div class="logo">
+            <img
+              src="https://demo-uminex.myshopify.com/cdn/shop/files/Logo_fb7c7c58-1b8f-455e-8b97-56d607743b37_145x@2x.png?v=1679893103"
+              alt="logo"
+            />
+          </div>
+
+          <div class="form__search">
+            <form
+              class="d-sm-flex align-items-center justify-content-between justify-content-lg-center"
+            >
+              <div
+                class="d-flex gap-5 justify-content-between align-items-center px-sm-3 form__search-categories"
+              >
+                <div class="fw-bolder">All Categories</div>
+                <i style="font-size: 10px" class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="">
+                <label for="search" class="visually-hidden">Search</label>
+                <input
+                  type="text"
+                  class="py-2"
+                  id="search"
+                  placeholder="Search in 200+ products"
+                />
+              </div>
+              <button type="submit" class="">Search</button>
+            </form>
+          </div>
+          <div
+            class="d-flex gap-4 align-items-center justify-content-lg-between justify-content-around"
+          >
+            <div class="d-flex gap-3 align-items-center">
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.8548 21.3334C21.6915 19.3656 20.0317 17.7341 18.0398 16.6006C16.0478 15.467 13.7928 14.8708 11.4979 14.8708C9.20304 14.8708 6.94798 15.467 4.95601 16.6006C2.96405 17.7341 1.30427 19.3656 0.141025 21.3334C-0.00138538 21.5886 -0.0376415 21.8892 0.0400248 22.1707C0.0766559 22.314 0.143667 22.448 0.236568 22.5635C0.329469 22.679 0.446115 22.7735 0.578691 22.8405C0.74972 22.9369 0.943214 22.987 1.1398 22.9856C1.33475 22.9938 1.52817 22.9481 1.69855 22.8535C1.86893 22.7589 2.0096 22.6191 2.10491 22.4498C3.06783 20.8199 4.44211 19.4685 6.09163 18.5296C7.74115 17.5906 9.60864 17.0967 11.5091 17.0967C13.4096 17.0967 15.2771 17.5906 16.9266 18.5296C18.5761 19.4685 19.9504 20.8199 20.9133 22.4498C21.0632 22.7032 21.3076 22.8876 21.5934 22.9628C21.8792 23.0381 22.1832 22.9981 22.4396 22.8516C22.5672 22.7839 22.6791 22.6903 22.768 22.5769C22.8569 22.4634 22.9209 22.3326 22.9558 22.193C22.9973 22.0502 23.0098 21.9007 22.9924 21.7531C22.9751 21.6055 22.9283 21.4628 22.8548 21.3334Z"
+                  fill="#212529"
+                ></path>
+                <path
+                  d="M11.4996 13.8C13.3079 13.8003 15.044 13.0842 16.3345 11.8057C17.6249 10.5272 18.3665 8.78854 18.3996 6.96384C18.3996 5.11691 17.6726 3.34563 16.3786 2.03966C15.0846 0.733688 13.3296 0 11.4996 0C9.66962 0 7.91457 0.733688 6.62057 2.03966C5.32657 3.34563 4.59961 5.11691 4.59961 6.96384C4.63276 8.78854 5.37433 10.5272 6.66476 11.8057C7.95518 13.0842 9.69132 13.8003 11.4996 13.8ZM6.89961 6.96384C6.89961 5.73255 7.38425 4.5517 8.24692 3.68105C9.10959 2.8104 10.2796 2.32128 11.4996 2.32128C12.7196 2.32128 13.8896 2.8104 14.7523 3.68105C15.615 4.5517 16.0996 5.73255 16.0996 6.96384C16.0996 8.19512 15.615 9.37597 14.7523 10.2466C13.8896 11.1173 12.7196 11.6064 11.4996 11.6064C10.2796 11.6064 9.10959 11.1173 8.24692 10.2466C7.38425 9.37597 6.89961 8.19512 6.89961 6.96384Z"
+                  fill="#212529"
+                ></path>
+              </svg>
+              <div class="lh-sm">
+                <div class="fw-light" style="font-size: 11px">Login</div>
+                <span class="fw-bolder">Account</span>
+              </div>
+            </div>
+            <div style="position: relative">
+              <svg
+                width="28"
+                height="23"
+                viewBox="0 0 28 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M25.7442 2.10275C24.2909 0.752316 22.3676 0 20.3687 0C18.3697 0 16.4465 0.752316 14.9931 2.10275L14 3.0345L13.0069 2.10275C11.5572 0.743159 9.62821 -0.0103607 7.62554 0.000636744C5.62664 -0.00860296 3.7019 0.744876 2.25576 2.10275C1.54386 2.75756 0.976298 3.54931 0.588263 4.42889C0.200228 5.30847 0 6.25712 0 7.216C0 8.17488 0.200228 9.12353 0.588263 10.0031C0.976298 10.8827 1.54386 11.6744 2.25576 12.3293L13.2147 22.6921C13.3222 22.7846 13.4428 22.8612 13.5727 22.9194C13.8471 23.0269 14.1529 23.0269 14.4273 22.9194C14.5572 22.8612 14.6778 22.7846 14.7853 22.6921L25.7442 12.3293C26.4561 11.6744 27.0237 10.8827 27.4117 10.0031C27.7998 9.12353 28 8.17488 28 7.216C28 6.25712 27.7998 5.30847 27.4117 4.42889C27.0237 3.54931 26.4561 2.75756 25.7442 2.10275ZM25.7442 7.19327C25.7475 7.86547 25.6121 8.53132 25.3461 9.15048C25.0801 9.76963 24.6891 10.3292 24.1968 10.7953L14 20.4536L3.81473 10.7953C3.31485 10.3331 2.91647 9.77502 2.64415 9.15553C2.37183 8.53604 2.23134 7.86823 2.23134 7.19327C2.23134 6.51832 2.37183 5.85051 2.64415 5.23102C2.91647 4.61153 3.31485 4.05348 3.81473 3.59127C4.84037 2.62701 6.20703 2.09319 7.62554 2.10275C9.05112 2.09206 10.4254 2.62562 11.4595 3.59127L13.2147 5.2616C13.3222 5.3541 13.4428 5.43066 13.5727 5.48886C13.8471 5.59638 14.1529 5.59638 14.4273 5.48886C14.5572 5.43066 14.6778 5.3541 14.7853 5.2616L16.5521 3.59127C17.5777 2.62701 18.9444 2.09319 20.3629 2.10275C21.7885 2.09206 23.1628 2.62562 24.1968 3.59127C24.6933 4.0554 25.0886 4.6141 25.3586 5.23335C25.6286 5.8526 25.7676 6.51944 25.7673 7.19327H25.7442Z"
+                  fill="#212529"
+                ></path>
+              </svg>
+              <span class="header__counter" data-js-wishlist-count="0">0</span>
+            </div>
+            <div style="position: relative">
+              <svg
+                width="27"
+                height="23"
+                viewBox="0 0 27 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.3797 20.7212C19.0844 20.7212 18.8011 20.6036 18.5923 20.3944C18.3835 20.1852 18.2662 19.9014 18.2662 19.6055H16.0391C16.0391 20.4932 16.391 21.3445 17.0175 21.9722C17.644 22.5999 18.4937 22.9526 19.3797 22.9526C20.2657 22.9526 21.1154 22.5999 21.7419 21.9722C22.3684 21.3445 22.7203 20.4932 22.7203 19.6055H20.4932C20.4932 19.9014 20.3759 20.1852 20.1671 20.3944C19.9583 20.6036 19.675 20.7212 19.3797 20.7212Z"
+                  fill="#212529"
+                ></path>
+                <path
+                  d="M11.5425 20.7212C11.2472 20.7212 10.9639 20.6036 10.7551 20.3944C10.5463 20.1852 10.4289 19.9014 10.4289 19.6055H8.19141C8.19141 20.0457 8.27794 20.4816 8.44607 20.8882C8.6142 21.2949 8.86062 21.6644 9.17128 21.9757C9.48194 22.287 9.85075 22.5339 10.2566 22.7023C10.6625 22.8708 11.0976 22.9575 11.5369 22.9575C11.9763 22.9575 12.4113 22.8708 12.8172 22.7023C13.2231 22.5339 13.5919 22.287 13.9025 21.9757C14.2132 21.6644 14.4596 21.2949 14.6278 20.8882C14.7959 20.4816 14.8824 20.0457 14.8824 19.6055H12.6553C12.6553 19.9013 12.5381 20.185 12.3294 20.3942C12.1207 20.6034 11.8377 20.721 11.5425 20.7212Z"
+                  fill="#212529"
+                ></path>
+                <path
+                  d="M26.0699 2.26207C26.0092 2.25171 25.9477 2.24658 25.8862 2.24673H8.06945C7.77412 2.24673 7.49089 2.36427 7.28205 2.5735C7.07322 2.78274 6.95591 3.06652 6.95591 3.36242C6.95591 3.65832 7.07322 3.9421 7.28205 4.15133C7.49089 4.36056 7.77412 4.47811 8.06945 4.47811H24.5715L24.2771 6.24788L22.7161 15.635H8.18985L4.4038 6.24788L2.14539 0.697308C2.02596 0.436191 1.81062 0.231283 1.54419 0.125239C1.27777 0.0191949 0.980789 0.020186 0.715076 0.128006C0.449363 0.235826 0.23539 0.442167 0.117698 0.704076C5.8841e-06 0.965985 -0.012336 1.26328 0.0832412 1.53408L3.68904 10.399L6.14998 16.9341C6.33162 17.4843 6.70675 17.8664 7.24821 17.8664H23.6591C23.9228 17.8665 24.178 17.7729 24.3792 17.6022C24.5804 17.4315 24.7147 17.1947 24.758 16.9341L26.5355 6.24788L26.9851 3.54581C27.0336 3.25398 26.9644 2.95481 26.7928 2.71407C26.6212 2.47333 26.3612 2.31075 26.0699 2.26207Z"
+                  fill="#212529"
+                ></path>
+              </svg>
+              <span class="header__counter" data-js-wishlist-count="0">0</span>
+            </div>
+            <div class="lh-sm">
+              <div class="fw-light" style="font-size: 11px">Your Cart</div>
+              <span class="fw-bolder">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="nav-bar" class="mt-2 py-3 border border-light-subtle">
+      <div class="container-xl">
+        <div class="d-lg-flex justify-content-between nav-menu">
+          <div
+            class="d-flex gap-3 align-items-center menu-categories justify-content-center"
+          >
+            <svg
+              width="18"
+              height="13"
+              viewBox="0 0 18 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.5 7.5H16.5C16.7344 7.5 16.9297 7.42188 17.0859 7.26562C17.2552 7.09635 17.3398 6.89453 17.3398 6.66016C17.3398 6.4388 17.2552 6.25 17.0859 6.09375C16.9297 5.92448 16.7344 5.83984 16.5 5.83984H1.5C1.26562 5.83984 1.0638 5.92448 0.894531 6.09375C0.738281 6.25 0.660156 6.4388 0.660156 6.66016C0.660156 6.89453 0.738281 7.09635 0.894531 7.26562C1.0638 7.42188 1.26562 7.5 1.5 7.5ZM1.5 2.5H16.5C16.7344 2.5 16.9297 2.42188 17.0859 2.26562C17.2552 2.09635 17.3398 1.89453 17.3398 1.66016C17.3398 1.4388 17.2552 1.25 17.0859 1.09375C16.9297 0.924479 16.7344 0.839844 16.5 0.839844H1.5C1.26562 0.839844 1.0638 0.924479 0.894531 1.09375C0.738281 1.25 0.660156 1.4388 0.660156 1.66016C0.660156 1.89453 0.738281 2.09635 0.894531 2.26562C1.0638 2.42188 1.26562 2.5 1.5 2.5ZM1.5 12.5H16.5C16.7344 12.5 16.9297 12.4219 17.0859 12.2656C17.2552 12.0964 17.3398 11.8945 17.3398 11.6602C17.3398 11.4388 17.2552 11.25 17.0859 11.0938C16.9297 10.9245 16.7344 10.8398 16.5 10.8398H1.5C1.26562 10.8398 1.0638 10.9245 0.894531 11.0938C0.738281 11.25 0.660156 11.4388 0.660156 11.6602C0.660156 11.8945 0.738281 12.0964 0.894531 12.2656C1.0638 12.4219 1.26562 12.5 1.5 12.5Z"
+                fill="#212529"
+              ></path>
+            </svg>
+            <span class="fw-bolder">Browse all Categories</span>
+          </div>
+          <div
+            class="d-lg-flex d-none gap-4 align-items-center justify-content-lg-between justify-content-sm-center mb-sm-4 mb-lg-0"
+          >
+            <div class="d-flex gap-1 align-items-center">
+              <a href="#" class="fw-bolder">Home</a>
+              <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="d-flex gap-1 align-items-center">
+              <a href="#" class="fw-bolder">Shop</a>
+              <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="d-flex gap-1 align-items-center">
+              <a href="#" class="fw-bolder">Product</a>
+              <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="d-flex gap-1 align-items-center">
+              <a href="#" class="fw-bolder">Pages</a>
+              <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="d-flex gap-1 align-items-center">
+              <a href="#" class="fw-bolder"> Blog</a>
+              <i style="font-size: 8px" class="fa-solid fa-chevron-down"></i>
+            </div>
+            <a href="#" class="fw-bolder">Contact Us</a>
+            <a href="#" class="fw-bolder text-danger">Buy Uminex!</a>
+          </div>
+          <div
+            class="d-lg-flex d-none gap-2 justify-content-lg-around justify-content-sm-center align-items-center"
+          >
+            <svg
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.08737 14.2867L1.48898 12.6883C0.837006 12.0363 0.837006 10.9637 1.48898 10.3117L3.08737 8.71331C3.36078 8.4399 3.58161 7.90359 3.58161 7.52502V5.26411C3.58161 4.33872 4.33875 3.58161 5.26414 3.58161H7.52502C7.90359 3.58161 8.4399 3.36081 8.71331 3.0874L10.3117 1.48898C10.9637 0.837006 12.0363 0.837006 12.6883 1.48898L14.2867 3.0874C14.5601 3.36081 15.0964 3.58161 15.4749 3.58161H17.7359C18.6612 3.58161 19.4184 4.33872 19.4184 5.26411V7.52502C19.4184 7.90359 19.6392 8.4399 19.9126 8.71331L21.511 10.3117C22.163 10.9637 22.163 12.0363 21.511 12.6883L19.9126 14.2867C19.6392 14.5601 19.4184 15.0964 19.4184 15.475V17.7358C19.4184 18.6612 18.6612 19.4184 17.7359 19.4184H15.4749C15.0964 19.4184 14.5601 19.6392 14.2867 19.9126L12.6883 21.511C12.0363 22.163 10.9637 22.163 10.3117 21.511L8.71331 19.9126C8.4399 19.6392 7.90359 19.4184 7.52502 19.4184H5.26414C4.33875 19.4184 3.58161 18.6612 3.58161 17.7358V15.475C3.58161 15.0859 3.36078 14.5496 3.08737 14.2867Z"
+                fill="#DD3842"
+              ></path>
+              <path
+                d="M3.08737 14.2867L1.48898 12.6883C0.837006 12.0363 0.837006 10.9637 1.48898 10.3117L3.08737 8.71331C3.36078 8.4399 3.58161 7.90359 3.58161 7.52502V5.26411C3.58161 4.33872 4.33875 3.58161 5.26414 3.58161H7.52502C7.90359 3.58161 8.4399 3.36081 8.71331 3.0874L10.3117 1.48898C10.9637 0.837006 12.0363 0.837006 12.6883 1.48898L14.2867 3.0874C14.5601 3.36081 15.0964 3.58161 15.4749 3.58161H17.7359C18.6612 3.58161 19.4184 4.33872 19.4184 5.26411V7.52502C19.4184 7.90359 19.6392 8.4399 19.9126 8.71331L21.511 10.3117C22.163 10.9637 22.163 12.0363 21.511 12.6883L19.9126 14.2867C19.6392 14.5601 19.4184 15.0964 19.4184 15.475V17.7358C19.4184 18.6612 18.6612 19.4184 17.7359 19.4184H15.4749C15.0964 19.4184 14.5601 19.6392 14.2867 19.9126L12.6883 21.511C12.0363 22.163 10.9637 22.163 10.3117 21.511L8.71331 19.9126C8.4399 19.6392 7.90359 19.4184 7.52502 19.4184H5.26414C4.33875 19.4184 3.58161 18.6612 3.58161 17.7358V15.475C3.58161 15.0859 3.36078 14.5496 3.08737 14.2867Z"
+                fill="#DD3842"
+                stroke="#DD3842"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8 15.0909L15.0909 8"
+                stroke="white"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M14.4937 14.5H14.5043"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M8.58442 8.59091H8.59503"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <span class="fw-bolder">Sale $20 Off Your First Order.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pb-5" id="products">
+      <div class="container-xl">
+        <div class="d-flex gap-3 py-3 mb-4">
+          <div
+            class="d-none d-lg-block p-4 pb-0 rounded bg-body"
+            style="width: 30%"
+          >
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Computer & Desktop</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Laptop & Ipad</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Cameras & Photos</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Smarphones & Tablets</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Home & Kitchen</a>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">TV & Audios</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#">Health & Beauty</a>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Watch & Eyewear</a>
+              <i style="font-size: 12px" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Top Deals</a>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pb-2 pt-2 justify-content-between border-bottom"
+            >
+              <a href="#" class="fw-medium">Top Selling Products</a>
+            </div>
+            <div
+              class="d-flex gap-5 align-items-center pt-2 justify-content-between"
+            >
+              <a href="#" class="fw-medium">Top Featured Products</a>
+            </div>
+          </div>
+          <div class="container-xl">
+            <div class="row mb-2">
+              <div class="col px-3 pb-1">
+                <div
+                  id="carouselExampleCaptions"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Slide 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="1"
+                      aria-label="Slide 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide-to="2"
+                      aria-label="Slide 3"
+                    ></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active position-relative">
+                      <img
+                        width="105%"
+                        src="https://demo-uminex.myshopify.com/cdn/shop/files/banner_1_1.jpg?v=1672388332&width=1500"
+                        alt=""
+                      />
+                      <div
+                        class="carousel-caption d-none d-md-block position-absolute top-0 start-5 text-start"
+                      >
+                        <p class="text-warning">Gamepad Console</p>
+                        <h2 class="d-none d-lg-block">
+                          Today's Offer Skin
+                          <p class="fs-1 d-none d-lg-block text-success">
+                            Gamepad
+                          </p>
+                          2022
+                        </h2>
+                        <button class="btn btn-lg btn-light mt-2 rounded-pill">
+                          EXPLORE NOW
+                        </button>
+                      </div>
+                    </div>
+                    <div class="carousel-item active position-relative">
+                      <img
+                        width="105%"
+                        src="https://demo-uminex.myshopify.com/cdn/shop/files/banner_1_1.jpg?v=1672388332&width=1500"
+                        alt=""
+                      />
+                      <div
+                        class="carousel-caption d-none d-md-block position-absolute top-0 start-5 text-start"
+                      >
+                        <p class="text-warning">Gamepad Console</p>
+                        <h2 class="d-none d-lg-block">
+                          Today's Offer Skin
+                          <p class="fs-1 d-none d-lg-block text-success">
+                            Gamepad
+                          </p>
+                          2022
+                        </h2>
+                        <button class="btn btn-lg btn-light mt-2 rounded-pill">
+                          EXPLORE NOW
+                        </button>
+                      </div>
+                    </div>
+                    <div class="carousel-item active position-relative">
+                      <img
+                        width="105%"
+                        src="https://demo-uminex.myshopify.com/cdn/shop/files/banner_1_1.jpg?v=1672388332&width=1500"
+                        alt=""
+                      />
+                      <div
+                        class="carousel-caption d-none d-md-block position-absolute top-0 start-5 text-start"
+                      >
+                        <p class="text-warning">Gamepad Console</p>
+                        <h2 class="d-none d-lg-block">
+                          Today's Offer Skin
+                          <p class="fs-1 d-none d-lg-block text-success">
+                            Gamepad
+                          </p>
+                          2022
+                        </h2>
+                        <button class="btn btn-lg btn-light mt-2 rounded-pill">
+                          EXPLORE NOW
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row d-lg-flex d-none">
+              <div class="col ps-3 pe-0 position-relative rounded">
+                <img
+                  width="100%"
+                  src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_2.jpg?v=1672808231&width=1500"
+                  alt=""
+                />\
+                <div class="position-absolute top-0 p-4">
+                  <p class="fw-medium m-0 fs-5 text-black">Trending</p>
+                  <p class="fw-medium m-0 fs-5 text-black">New Phone Pro</p>
+                  <p class="m-0 text-black">20 Days Return Product</p>
+                </div>
+              </div>
+              <div class="col pe-1 ps-1 position-relative rounded">
+                <img
+                  width="100%"
+                  src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_1.jpg?v=1672808212&width=1500"
+                  alt=""
+                />\
+                <div class="position-absolute top-0 p-4">
+                  <p class="fw-medium m-0 fs-5 text-black">Trending</p>
+                  <p class="fw-medium m-0 fs-5 text-black">New Phone Pro</p>
+                  <p class="m-0 text-black">20 Days Return Product</p>
+                </div>
+              </div>
+              <div class="col pe-3 ps-0 position-relative rounded">
+                <img
+                  width="100%"
+                  src="https://demo-uminex.myshopify.com/cdn/shop/files/img_1_2.jpg?v=1672808231&width=1500"
+                  alt=""
+                />\
+                <div class="position-absolute top-0 p-4">
+                  <p class="fw-medium m-0 fs-5 text-black">Trending</p>
+                  <p class="fw-medium m-0 fs-5 text-black">New Phone Pro</p>
+                  <p class="m-0 text-black">20 Days Return Product</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <div class="d-xl-flex gap-2">
+          <div class="align-self-start">
+            <div class="d-flex gap-2 justify-content-between">
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="align-self-center flex-shrink-1 bg-body border border-danger border-3 p-4 text-xl-start rounded text-center my-3 my-xl-0"
+          >
+            <h4 class="pb-2 border-bottom mb-3">TODAY'S OFFER</h4>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="text-white bg-danger rounded px-4 py-2 fw-bolder">
+                -20%
+              </div>
+              <div class="border rounded-circle p-2">Abc</div>
+            </div>
+            <img
+              src="https://demo-uminex.myshopify.com/cdn/shop/products/products_11_2.jpg?v=1672302141&width=360"
+              alt="main-product"
+            />
+            <h5 class="fw-bold fs-6">
+              Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+            </h5>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+            <span>(68)</span>
+            <div class="text-danger fs-3 fw-bolder">
+              $128.00
+              <span class="fs-5 fw-light text-decoration-line-through"
+                >$12.00</span
+              >
+            </div>
+            <p>Hurry up, Offer end in:</p>
+            <div
+              class="d-flex gap-2 align-items-center pb-3 border-bottom border-5 border-danger rounded justify-content-center justify-content-xl-start"
+            >
+              <div
+                style="width: 50px"
+                class="py-3 px-2 text-center bg-danger text-white rounded"
+              >
+                826
+              </div>
+              <div class="fs-1">:</div>
+              <div
+                style="width: 50px"
+                class="py-3 px-2 text-center bg-danger text-white rounded"
+              >
+                29
+              </div>
+              <div class="fs-1">:</div>
+              <div
+                style="width: 50px"
+                class="py-3 px-2 text-center bg-danger text-white rounded"
+              >
+                20
+              </div>
+              <div class="fs-1">:</div>
+              <div
+                style="width: 50px"
+                class="py-3 px-2 text-center bg-danger text-white rounded"
+              >
+                08
+              </div>
+            </div>
+            <p class="mt-2">
+              Sold : <span class="fs-6 fw-bold">620/896</span> products
+            </p>
+          </div>
+          <div class="align-self-end">
+            <div class="d-flex gap-2">
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+            </div>
+            <div class="d-flex gap-2">
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+              <div
+                class="col bg-body text-xl-start p-2 py-4 mb-2 rounded text-center"
+              >
+                <span class="text-white bg-danger rounded px-4 py-1 fw-bolder">
+                  -20%
+                </span>
+                <img
+                  src="https://demo-uminex.myshopify.com/cdn/shop/products/products_5_2.jpg?v=1670906101&width=360"
+                  alt="phone"
+                  width="165px"
+                />
+                <h5 class="fw-bold fs-6 my-2">
+                  Apple Iphone 13 Pro Max 128GB Gold Fully Unlocked
+                </h5>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <i class="fa-solid fa-star" style="color: #ffd43b"></i>
+                <div class="text-danger fs-4 fw-bolder my-1">
+                  $128.00
+                  <span class="fs-6 fw-light text-decoration-line-through"
+                    >$12.00</span
+                  >
+                </div>
+                <i class="fa-solid fa-check" style="color: #23e052"></i>
+                <span style="color: #23e052">In Stock</span>
+                <span>82 Products</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container-lg">
+        <div
+          class="d-lg-flex gap-5 align-items-start justify-content-between py-5 text-center text-lg-start"
+        >
+          <div>
+            <h3 class="mb-5">ABOUT THE STORE</h3>
+            <p>Got Question? Call us 24/7</p>
+            <a class="fs-1">+222-1800-262</a>
+            <p>268 St, South New York/NY 98944, United States</p>
+            <p>Customersupport@example.com</p>
+            <p>Aloshopify@alothemes.com</p>
+          </div>
+          <div>
+            <h3 class="mb-5">INFOMATION</h3>
+            <p>
+              <a href="#">Blog Us</a>
+            </p>
+            <p>
+              <a href="#">About Us</a>
+            </p>
+            <p>
+              <a href="#">Delivery Information</a>
+            </p>
+            <p>
+              <a href="#">Privacy Policy</a>
+            </p>
+            <p>
+              <a href="#">Feedbacks</a>
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-5">Quick Links</h3>
+            <p>
+              <a href="#">Store Location</a>
+            </p>
+            <p>
+              <a href="#">Order Tracking</a>
+            </p>
+            <p>
+              <a href="#">FAQs</a>
+            </p>
+          </div>
+          <div>
+            <h3 class="mb-5">NEWLETTER SIGNUP</h3>
+            <p>
+              Join 20.000+ subscribers and get a new discount coupon<br />
+              on every Saturday. Updates information on Sales and<br />
+              Offers.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button
+                class="btn btn-primary rounded-pill btn-lg"
+                type="button"
+                id="button-addon2"
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+            <p>Subscribe for Uminex and get 20% off your first purchase.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section id="bottom-bar">
+      <div class="container-lg">
+        <div class="d-lg-flex align-items-center justify-content-between py-4">
+          <div class="fs-6">
+            Copyright © <a href="#" class="text-primary">Uminex</a>; all rights
+            reserved. Powered by
+            <a href="#" class="text-primary"> Alothemes.</a>
+          </div>
+          <div class="d-flex gap-5 justify-content-end align-items-center">
+            <div>Payment method :</div>
+            <img
+              src="//demo-uminex.myshopify.com/cdn/shop/files/payment_acfdf180-1e05-48f1-97a2-adca8e5565e8.png?v=1679910794&amp;width=3840"
+              alt=""
+              width="50%"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
